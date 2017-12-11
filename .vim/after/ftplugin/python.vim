@@ -5,4 +5,3 @@ setlocal autoindent
 setlocal expandtab
 setlocal smarttab
 setlocal formatoptions=croql
-

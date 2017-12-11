@@ -7,12 +7,6 @@ set cursorline "horizon cursor line
 set cursorcolumn "vertical cursor line
 syntax on "syntax highlight
 
-" Indentation
-set tabstop=8
-set expandtab
-set shiftwidth=4
-set softtabstop=4
-
 " folding
 set foldmethod=indent
 noremap <space> za
@@ -22,6 +16,10 @@ set visualbell
 
 " Color Scheme
 colorscheme slate
+
+" Enable Language Specific Configuration
+filetype plugin on
+filetype plugin indent on
 
 """"""""""""""""""""""""""""""""""""""""""""
 "                 Plugin                   "
