@@ -17,9 +17,11 @@ set softtabstop=4
 set foldmethod=indent
 noremap <space> za
 
-" split
-set splitright
-set splitbelow
+" Use visual bell instead of beeping
+set visualbell
+
+" Color Scheme
+colorscheme slate
 
 """"""""""""""""""""""""""""""""""""""""""""
 "                 Plugin                   "
