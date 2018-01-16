@@ -9,7 +9,8 @@ syntax on "syntax highlight
 
 " folding
 set foldmethod=indent
-noremap <space> za
+noremap <space> zA
+noremap <F9> zO
 
 " Use visual bell instead of beeping
 set visualbell
