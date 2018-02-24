@@ -31,17 +31,17 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 
-""""""""""""""""""""""""""""""""""""""""""""
-"             Compile and Run              "
-""""""""""""""""""""""""""""""""""""""""""""
-" Compile Python
-func CompileAndRun(instruction)
-	write
-	exec a:instruction
-endfunc
-
-" auto compile based on file type
-autocmd FileType python nnoremap <F5> :call CompileAndRun("!clear && python3 %")<CR>
+" """"""""""""""""""""""""""""""""""""""""""""
+" "             Compile and Run              "
+" """"""""""""""""""""""""""""""""""""""""""""
+" " Compile Python
+" func CompileAndRun(instruction)
+" 	write
+" 	exec a:instruction
+" endfunc
+" 
+" " auto compile based on file type
+" autocmd FileType python nnoremap <F5> :call CompileAndRun("!clear && python3 %")<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""
