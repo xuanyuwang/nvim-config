@@ -29,29 +29,3 @@ filetype plugin indent on
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
-
-
-" """"""""""""""""""""""""""""""""""""""""""""
-" "             Compile and Run              "
-" """"""""""""""""""""""""""""""""""""""""""""
-" " Compile Python
-" func CompileAndRun(instruction)
-" 	write
-" 	exec a:instruction
-" endfunc
-" 
-" " auto compile based on file type
-" autocmd FileType python nnoremap <F5> :call CompileAndRun("!clear && python3 %")<CR>
-
-
-""""""""""""""""""""""""""""""""""""""""""""
-"                 Comment                  "
-""""""""""""""""""""""""""""""""""""""""""""
-func Comment(prefix)
-	let currentLine = getline(".")
-	let newLine = a:prefix . " " . currentLine
-	call setline(".", newLine)
-endfunc
-
-autocmd FileType python nnoremap <C-c> :call Comment("#")<CR>
-autocmd FileType c nnoremap <C-c> :call Comment("\/\/")<CR>
