@@ -17,6 +17,7 @@ function s:Comment(prefix)
 	let currentLine = getline(".")
 	let newLine = a:prefix . " " . currentLine
 	call setline(".", newLine)
+	call cursor(line('.')+1, 0)
 endfunction
 
 " map the key <Ctrl-c> to this plugin
