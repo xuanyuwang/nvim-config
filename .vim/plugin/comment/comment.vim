@@ -15,7 +15,11 @@ let g:loaded_comment = 1
 "
 function s:Comment(prefix)
 	let currentLine = getline(".")
-	let newLine = a:prefix . " " . currentLine
+	if currentLine =~ '^' . a:prefix . '\+.*'
+		let newLine = strcharpart(currentLine, 2)
+	else
+		let newLine = a:prefix . " " . currentLine
+	endif
 	call setline(".", newLine)
 	call cursor(line('.')+1, 0)
 endfunction
