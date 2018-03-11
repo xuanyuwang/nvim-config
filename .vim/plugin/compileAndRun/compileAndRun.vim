@@ -13,9 +13,10 @@ let g:loaded_compileAndRun = 1
 """"""""""""""""""""""""""""""""""""""""""""
 "             Compile and Run              "
 """"""""""""""""""""""""""""""""""""""""""""
-" Compile Python
+" Compile 
 function s:CompileAndRun(instruction)
 	write
+	"echo a:instruction
 	execute a:instruction
 endfunction
 
@@ -29,5 +30,5 @@ nnoremap <unique> <script> <Plug>CAR <SID>CompileAndRun
 
 " auto compile based on file type
 autocmd FileType python nnoremap <SID>CompileAndRun :call <SID>CompileAndRun("!clear && python3 %")<CR>
-
+autocmd FileType java nnoremap <SID>CompileAndRun :call <SID>CompileAndRun("!clear && javac % && java %:t:r")<CR>
 
