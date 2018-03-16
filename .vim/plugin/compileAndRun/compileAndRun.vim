@@ -31,4 +31,4 @@ nnoremap <unique> <script> <Plug>CAR <SID>CompileAndRun
 " auto compile based on file type
 autocmd FileType python nnoremap <SID>CompileAndRun :call <SID>CompileAndRun("!clear && python3 %")<CR>
 autocmd FileType java nnoremap <SID>CompileAndRun :call <SID>CompileAndRun("!clear && javac % && java %:t:r")<CR>
-
+autocmd FileType perl nnoremap <SID>CompileAndRun :call <SID>CompileAndRun("!clear && perl %")<CR>
