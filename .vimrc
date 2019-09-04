@@ -9,7 +9,7 @@ syntax on "syntax highlight
 
 " folding
 set foldmethod=indent
-noremap <space> zA
+noremap <space> za
 
 " Use visual bell instead of beeping
 set visualbell
@@ -21,11 +21,47 @@ colorscheme slate
 filetype plugin on
 filetype plugin indent on
 
+" Tab
+set tabstop=4 " The width of a TAB is set to 4. It's still a \t. Just Vim will interpret it to be having a widget of 4
+set shiftwidth=4 " Indent will have a widget of 4
+
+" Show file options above the command line
+set wildmenu
+
 """"""""""""""""""""""""""""""""""""""""""""
 "                 Plugin                   "
 """"""""""""""""""""""""""""""""""""""""""""
+
+call plug#begin('~/.vim/plugged')
+
+" autocompletor
+Plug 'maralla/completor.vim'
+
+" status line
+Plug 'vim-airline/vim-airline'
+
+" syntax highlight
+Plug 'sheerun/vim-polyglot'
+
+" visualize bookmarks
+Plug 'kshenoy/vim-signature'
+
+" Display tags
+" Plug 'majutsushi/tagbar'
+
+" Display Color in real time
+Plug 'cakebaker/scss-syntax.vim'
+
+" fuzzy find (if installed using Homebrew)
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
+call plug#end()
 
 " configure completor.vim
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+" configure fzf
+nnoremap <C-p> :FZF . <CR>
