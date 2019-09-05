@@ -7,6 +7,8 @@ rm -f .vimrc
 echo "copying..."
 cp ~/.vimrc .
 cp -r ~/.vim/after .
+cp -r ~/.vim/autoload .
+cp -r ~/.vim/plugin .
 
 echo "gitting..."
 git add -A
