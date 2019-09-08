@@ -5,11 +5,12 @@ set number "line number
 set relativenumber "relative line number
 set cursorline "horizon cursor line
 set cursorcolumn "vertical cursor line
+let mapleader = " "
 syntax on "syntax highlight
 
 " folding
 set foldmethod=indent
-noremap <space> za
+noremap <leader>f za
 
 " Use visual bell instead of beeping
 set visualbell
