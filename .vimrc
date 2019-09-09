@@ -65,4 +65,7 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 
 " configure fzf
-nnoremap <C-p> :FZF . <CR>
+" Open files in vertical horizontal split
+nnoremap <C-p> :call fzf#run({
+			\ 'down': '40%',
+			\ 'sink': 'vertical botright split' })<CR>
