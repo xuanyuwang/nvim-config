@@ -36,7 +36,7 @@ set wildmenu
 call plug#begin('~/.vim/plugged')
 
 " autocompletor
-Plug 'maralla/completor.vim'
+Plug 'maralla/completor.vim', { 'commit': '4c58426a88ba056841b1d1b44536f2f85de120cc'}
 
 " status line
 Plug 'vim-airline/vim-airline'
@@ -44,22 +44,20 @@ Plug 'vim-airline/vim-airline'
 " syntax highlight
 Plug 'sheerun/vim-polyglot'
 
-" visualize bookmarks
-Plug 'kshenoy/vim-signature'
-
-" Display tags
-" Plug 'majutsushi/tagbar'
-
 " Display Color in real time
-Plug 'cakebaker/scss-syntax.vim'
+" Plug 'cakebaker/scss-syntax.vim'
 
 " fuzzy find (if installed using Homebrew)
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
 
+" lint engine
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 " configure completor.vim
+let g:completor_auto_trigger=1
 inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
