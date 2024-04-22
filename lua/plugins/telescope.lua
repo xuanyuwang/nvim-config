@@ -6,10 +6,10 @@ return {
         -- or                              , branch = '0.1.x',
         dependencies = { "nvim-lua/plenary.nvim" },
         keys = {
-            { "<leader>ff", "Telescope find_files",  mode = "n", desc = "Search: File" },
-            { "<leader>fs", "Telescope live_grep",   mode = "n", desc = "Search: string in CWD" },
-            { "<leader>ft", "Telescope colorscheme", mode = "n", desc = "Search: Colorscheme" },
-            { "<leader>gs", "Telescope git_status",  mode = "n", desc = "Git: status" },
+            { "<leader>ff", ":Telescope find_files<CR>",  mode = "n", desc = "Search: File" },
+            { "<leader>fs", ":Telescope live_grep<CR>",   mode = "n", desc = "Search: string in CWD" },
+            { "<leader>ft", ":Telescope colorscheme<CR>", mode = "n", desc = "Search: Colorscheme" },
+            { "<leader>gs", ":Telescope git_status<CR>",  mode = "n", desc = "Git: status" },
         },
     },
     {
