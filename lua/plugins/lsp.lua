@@ -18,12 +18,14 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+        keys = {
+            {"K", vim.lsp.buf.hover, mode = "n", desc = "LSP: Definition"},
+            {"<leader>ca", vim.lsp.buf.code_action, mode = {"n", "v"}, desc = "LSP: Definition"},
+        },
 		config = function()
 			local lspconfig = require("lspconfig")
 
 			lspconfig.lua_ls.setup({})
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, {})
 		end,
 	},
 }

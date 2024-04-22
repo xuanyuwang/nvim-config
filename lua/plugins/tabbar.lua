@@ -9,6 +9,11 @@ return {
 	end,
 	version = "^1.0.0", -- optional: only update when a new 1.x version is released
 
+    keys = {
+        { "<Tab>", "<Cmd>BufferNext<CR>", mode = "n", desc = "Buffer: Next", noremap = true, silent = true },
+        { "S-<Tab>", "<Cmd>BufferPrevious<CR>", mode = "n", desc = "Buffer: Previous", noremap = true, silent = true },
+    },
+
 	config = function()
 		require("barbar").setup({
 			opts = {
@@ -16,12 +21,5 @@ return {
 				animation = true,
 			},
 		})
-		vim.keymap.set("n", "<Tab>", "<Cmd>BufferNext<CR>", { noremap = true, silent = true, desc = "Next buffer" })
-		vim.keymap.set(
-			"n",
-			"S-<Tab>",
-			"<Cmd>BufferPrevious<CR>",
-			{ noremap = true, silent = true, desc = "Previous buffer" }
-		)
 	end,
 }
