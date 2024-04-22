@@ -6,7 +6,7 @@ return {
         -- or                              , branch = '0.1.x',
         dependencies = { "nvim-lua/plenary.nvim" },
         keys = {
-            { "<C-p>",      "Telescope find_files",  mode = "n", desc = "Search: File" },
+            { "<leader>ff", "Telescope find_files",  mode = "n", desc = "Search: File" },
             { "<leader>fs", "Telescope live_grep",   mode = "n", desc = "Search: string in CWD" },
             { "<leader>ft", "Telescope colorscheme", mode = "n", desc = "Search: Colorscheme" },
             { "<leader>gs", "Telescope git_status",  mode = "n", desc = "Git: status" },
