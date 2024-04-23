@@ -13,7 +13,7 @@ return {
                 silent = true,
             },
             {
-                "S-<Tab>",
+                "<S-Tab>",
                 "<Cmd>BufferLineCyclePrev<CR>",
                 mode = "n",
                 desc = "Buffer: Previous",
