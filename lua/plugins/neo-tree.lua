@@ -7,13 +7,21 @@ return {
 		"MunifTanjim/nui.nvim",
 		-- "3rd/image.nvim", -- Optional image support in preview window: See `# Preview Mode` for more information
 	},
-    keys = {
-        {
-            "<C-n>", ":Neotree toggle filesystem reveal left<CR>",
-            mode = "n",
-            desc = "Explorer - Toggle",
-        }
-    },
-	config = function()
-	end,
+	keys = {
+		{
+			"<C-n>",
+			":Neotree toggle filesystem reveal left<CR>",
+			mode = "n",
+			desc = "Explorer - Toggle",
+		},
+	},
+	opts = {
+		filesystem = {
+			filtered_items = {
+				hide_dotfiles = false,
+				hide_gitignored = false,
+			},
+		},
+	},
+    config = true,
 }
