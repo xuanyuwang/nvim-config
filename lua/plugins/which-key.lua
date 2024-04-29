@@ -1,10 +1,3 @@
-local bufferMapping = {
-	["<leader>b"] = {
-		name = "+buffer",
-		x = { "<cmd>bdelete<CR>", "Buffer: delete" },
-	},
-}
-
 return {
 	"folke/which-key.nvim",
 	event = "VeryLazy",
@@ -17,8 +10,5 @@ return {
 		-- or leave it empty to use the default settings
 		-- refer to the configuration section below
 	},
-	config = function()
-		local wk = require("which-key")
-		wk.register(bufferMapping)
-	end,
+	config = true,
 }

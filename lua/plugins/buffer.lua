@@ -1,5 +1,15 @@
 return {
     {
+        "echasnovski/mini.bufremove",
+        version = "*",
+        keys = {
+            { "<leader>bx", ":lua MiniBufremove.delete()", mode = { "n", "v" }, desc = "Buffer: close" }
+        },
+        config = function()
+            require("mini.bufremove").setup()
+        end,
+    },
+    {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
@@ -26,44 +36,4 @@ return {
             require("bufferline").setup({})
         end,
     },
-    -- {
-    -- 	"romgrk/barbar.nvim",
-    -- 	lazy = false,
-    -- 	dependencies = {
-    -- 		"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
-    -- 		"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
-    -- 	},
-    -- 	init = function()
-    -- 		vim.g.barbar_auto_setup = false
-    -- 	end,
-    -- 	version = "^1.0.0", -- optional: only update when a new 1.x version is released
-
-    -- 	keys = {
-    -- 		{
-    -- 			"<Tab>",
-    -- 			"<Cmd>BufferNext<CR>",
-    -- 			mode = "n",
-    -- 			desc = "Buffer: Next",
-    -- 			noremap = true,
-    -- 			silent = true,
-    -- 		},
-    -- 		{
-    -- 			"S-<Tab>",
-    -- 			"<Cmd>BufferPrevious<CR>",
-    -- 			mode = "n",
-    -- 			desc = "Buffer: Previous",
-    -- 			noremap = true,
-    -- 			silent = true,
-    -- 		},
-    -- 	},
-
-    -- 	config = function()
-    -- 		require("barbar").setup({
-    -- 			opts = {
-    -- 				-- lazy.nvim will automatically call setup for you. put your options here, anything missing will use the default:
-    -- 				animation = true,
-    -- 			},
-    -- 		})
-    -- 	end,
-    -- },
 }
