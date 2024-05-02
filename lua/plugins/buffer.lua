@@ -3,7 +3,7 @@ return {
         "echasnovski/mini.bufremove",
         version = "*",
         keys = {
-            { "<leader>bx", ":lua MiniBufremove.delete()", mode = { "n", "v" }, desc = "Buffer: close" }
+            { "<leader>bx", ":lua MiniBufremove.delete()<cr>", mode = { "n", "v" }, desc = "Buffer: close" }
         },
         config = function()
             require("mini.bufremove").setup()
