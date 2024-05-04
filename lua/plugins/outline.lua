@@ -1,14 +1,49 @@
 return {
-    'stevearc/aerial.nvim',
-    opts = {
-        max_width = 0.6
-    },
-    -- Optional dependencies
-    dependencies = {
-        "nvim-treesitter/nvim-treesitter",
-        "nvim-tree/nvim-web-devicons"
-    },
-    keys = {
-        {"<leader>a", "<cmd>AerialToggle!<CR>", mode = "n", desc = "Outline: Toggle"}
-    }
+	"stevearc/aerial.nvim",
+	opts = {
+		layout = {
+			max_width = 0.6,
+			placement = "edge",
+			preserve_equality = true,
+		},
+        manage_folds = true,
+        link_folds_to_tree = true,
+        attach_mode = "global",
+		filter_kind = {
+            "Array",
+            "Boolean",
+			"Class",
+			"Constant",
+			"Constructor",
+			"Enum",
+            "EnumMember",
+            "Event",
+			"Field",
+            "File",
+			"Function",
+			"Interface",
+            "Key",
+			"Method",
+			"Module",
+            "Namespace",
+            "Null",
+            "Number",
+            "Object",
+            "Operator",
+			"Package",
+            "Property",
+            "String",
+			"Struct",
+            "TypeParameter",
+            "Variable",
+		},
+	},
+	-- Optional dependencies
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter",
+		"nvim-tree/nvim-web-devicons",
+	},
+	keys = {
+		{ "<leader>a", "<cmd>AerialToggle!<CR>", mode = "n", desc = "Outline: Toggle" },
+	},
 }
