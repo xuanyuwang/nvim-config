@@ -8,7 +8,8 @@ return {
     dependencies = { 'kkharji/sqlite.lua' },
     keys = {
         {
-            "<C-S-P>", "<Cmd>Legendary<CR>",
+            "<leader>p",
+            "<Cmd>Legendary<CR>",
             mode = "n",
             desc = "Open command palette"
         }
