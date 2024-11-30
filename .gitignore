@@ -2,3 +2,4 @@
 **/*.swp
 **/*.session
 Session.vim
+.tmp
